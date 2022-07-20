@@ -1,0 +1,61 @@
+/* 工具类，供全局使用 */
+
+
+/* 导入字体 */
+@font-face {
+    font-family: "PingFangSCRegular";
+    src: url('../fonts/PingFangSCRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont.woff2') format('woff2'),
+        url('../fonts/iconfont.woff') format('woff'),
+        url('../fonts/iconfont.ttf') format('truetype'),
+        url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+/* 继承：所有的标签都继承body，继承字体 */
+body {
+    font-family: "PingFangSCRegular";
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 居中显示 */
+.center-wrap {
+    /* 1152是设计图的div宽度+间距算出来的 */
+    width: 1152px;
+    margin: 0 auto;
+}
+.clearfix {
+    overflow: hidden;
+}
+
+/* div内部有浮动元素的话，那么这个浮动元素会让div的高度塌陷 */
+/* 伪元素::after+content'' 能消除父盒子的塌陷 */
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+/* 转块级元素 */
+.db {
+    display: block;
+}
+/* 转行内块级 */
+.dib {
+    display: inline-block;
+}
+/* 文字u中 */
+.tac {
+    text-align: center;
+}
